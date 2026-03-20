@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Evidence Redirect — Paper Heist QR</title>
+<style>
+  body { font-family: system-ui, sans-serif; max-width: 600px; margin: 40px auto; padding: 0 20px; color: #333; }
+  h1 { font-size: 1.4rem; }
+  .loading { color: #666; }
+  .error { color: #b00; }
+  a { color: #0366d6; }
+</style>
+</head>
+<body>
+<h1>Court Evidence Redirect</h1>
+<p id="status" class="loading">Looking up document…</p>
+<p id="fallback" style="display:none">
+  If not redirected automatically, <a id="manual-link" href="#">click here</a>.
+</p>
+
+<script>
+(function() {
+  var params = new URLSearchParams(window.location.search);
+  var id = params.get('id');
+
+  if (!id) {
+    document.getElementById('status').className = 'error';
+    document.getElementById('status').textContent = 'No document ID provided. Use ?id=DOC_0001 format.';
+    return;
+  }
+
+  // Load evidence map
+  fetch('data/evidence_map.json')
+    .then(function(r) { return r.json(); })
+    .then(function(map) {
+      var dest = map[id];
+      if (dest) {
+        document.getElementById('status').textContent = 'Redirecting to: ' + id;
+        document.getElementById('fallback').style.display = 'block';
+        document.getElementById('manual-link').href = dest;
+        window.location.replace(dest);
+      } else {
+        document.getElementById('status').className = 'error';
+        document.getElementById('status').textContent = 'Document "' + id + '" not found in evidence map.';
+      }
+    })
+    .catch(function(err) {
+      document.getElementById('status').className = 'error';
+      document.getElementById('status').textContent = 'Error loading evidence map: ' + err.message;
+    });
+})();
+</script>
+</body>
+</html>

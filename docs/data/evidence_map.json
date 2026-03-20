@@ -1,0 +1,23 @@
+{
+  "_comment": "Map QR code IDs to destination URLs. Update destinations without changing QR codes.",
+  "_updated": "2026-03-20",
+  "_format": "DOC_XXXX → Google Drive or other permanent URL",
+  "DOC_0001": "https://drive.google.com/file/d/PLACEHOLDER/view",
+  "DOC_0002": "https://drive.google.com/file/d/PLACEHOLDER/view",
+  "DOC_0003": "https://drive.google.com/file/d/PLACEHOLDER/view",
+  "DOC_0004": "https://drive.google.com/file/d/PLACEHOLDER/view",
+  "DOC_0005": "https://drive.google.com/file/d/PLACEHOLDER/view",
+  "DOC_0006": "https://drive.google.com/file/d/PLACEHOLDER/view",
+  "DOC_0007": "https://drive.google.com/file/d/PLACEHOLDER/view",
+  "DOC_0008": "https://drive.google.com/file/d/PLACEHOLDER/view",
+  "DOC_0009": "https://drive.google.com/file/d/PLACEHOLDER/view",
+  "DOC_0010": "https://drive.google.com/file/d/PLACEHOLDER/view",
+  "DOC_0011": "https://drive.google.com/file/d/PLACEHOLDER/view",
+  "DOC_0012": "https://drive.google.com/file/d/PLACEHOLDER/view",
+  "DOC_0013": "https://drive.google.com/file/d/PLACEHOLDER/view",
+  "DOC_0014": "https://drive.google.com/file/d/PLACEHOLDER/view",
+  "DOC_0015": "https://drive.google.com/file/d/PLACEHOLDER/view",
+  "DOC_0016": "https://drive.google.com/file/d/PLACEHOLDER/view",
+  "DOC_0017": "https://drive.google.com/file/d/PLACEHOLDER/view",
+  "DOC_0018": "https://drive.google.com/file/d/PLACEHOLDER/view"
+}
